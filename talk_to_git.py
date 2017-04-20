@@ -7,7 +7,7 @@ class MyGithubMessenger(object):
         
     def pull_github_file(self, file_location, file_name):
         resp = requests.get(self.url_ +  str(file_location) + "/" + "master" + '/' + str(file_name))
-        print resp.text
+        
         if resp.status_code != 200:
             return "Unable to connect to your github...try again"
         my_file = resp.text
