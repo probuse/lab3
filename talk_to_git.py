@@ -14,14 +14,3 @@ class MyGithubMessenger(object):
         if resp.text == 400:
             return "Invalid file location or file name...try again"
         return my_file
-        
-    
-    def push_file_to_github(self, repository_name):
-        resp = requests.post(self.url_ +  str(repository_name) + "/" + "master" + '/', 'hello world.txt')
-    
-    #def search_user(self, username):
-     #   pass
-       
-my_bot = MyGithubMessenger('probuse')
-my_bot.push_file_to_github('real-world-problem')
-
